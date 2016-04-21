@@ -1,0 +1,84 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, FMTBcd, StdCtrls, Grids, DBGrids, DB, DBClient, Provider, SqlExpr,
+  DBXMSSQL, ExtCtrls, DBCtrls;
+
+type
+  TfmMain = class(TForm)
+    sqlConn: TSQLConnection;
+    SQLDataSet1: TSQLDataSet;
+    DataSetProvider1: TDataSetProvider;
+    ClientDataSet1: TClientDataSet;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    btnRun: TButton;
+    DBNavigator1: TDBNavigator;
+    btnPrevious: TButton;
+    btnNext: TButton;
+    btnFirst: TButton;
+    btnLast: TButton;
+
+    procedure btnRunClick(Sender: TObject);
+    procedure btnFirstClick(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure btnNextClick(Sender: TObject);
+    procedure btnPreviousClick(Sender: TObject);
+    procedure btnLastClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  fmMain: TfmMain;
+
+
+implementation
+
+{$R *.dfm}
+
+procedure TfmMain.btnFirstClick(Sender: TObject);
+begin
+    ClientDataSet1.FindFirst;
+end;
+
+procedure TfmMain.btnLastClick(Sender: TObject);
+begin
+    ClientDataSet1.FindLast;
+    DataSetProvider1.
+end;
+
+procedure TfmMain.btnNextClick(Sender: TObject);
+begin
+    ClientDataSet1.FindNext;
+end;
+
+procedure TfmMain.btnPreviousClick(Sender: TObject);
+begin
+    ClientDataSet1.FindPrior;
+end;
+
+procedure TfmMain.btnRunClick(Sender: TObject);
+begin
+        if ClientDataSet1.state in [dsInactive, dsOpening] then
+        begin
+                btnRun.Caption := 'Close';
+                ClientDataSet1.Open;
+        end
+        else
+        begin
+            btnRun.Caption := 'Open';
+            ClientDataSet1.close;
+        end;
+end;
+procedure TfmMain.DBGrid1CellClick(Column: TColumn);
+begin
+    showMessage('heloo');
+end;
+
+end.

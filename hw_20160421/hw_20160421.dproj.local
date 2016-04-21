@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2016/04/21 13:53:03.000.105,=C:\Users\b050404\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/04/21 15:19:15.000.675,C:\Users\b050404\Documents\RAD Studio\Projects\Unit1.dfm=C:\Users\b050404\Documents\SourceTree_respositosry\hw_20160421\Unit1.dfm</Transaction>
+    <Transaction>2016/04/21 15:19:15.000.675,C:\Users\b050404\Documents\RAD Studio\Projects\Unit1.pas=C:\Users\b050404\Documents\SourceTree_respositosry\hw_20160421\Unit1.pas</Transaction>
+    <Transaction>2016/04/21 15:19:24.000.475,C:\Users\b050404\Documents\RAD Studio\Projects\Project1.dproj=C:\Users\b050404\Documents\SourceTree_respositosry\hw_20160421\hw_20160421.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
